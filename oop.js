@@ -2,7 +2,21 @@
 // it should have a dynamic name property
 // it should have a color property, that is silver by default
 // it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
+class Unicorn {
+  constructor (name) {
+    this.name = name;
+    this.color = "silver";
+  }
 
+  say(speech) {
+    this.speech = speech;
+    console.log("*~* "+ this.speech + " *~*");
+  }
+}
+
+var unicorn1 = new Unicorn("Bob");
+console.log(unicorn1);
+unicorn1.say("Hello");
 
 
 // Write a class called Vampire
