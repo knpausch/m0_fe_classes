@@ -25,6 +25,23 @@ unicorn1.say("Hello");
 // it should have a thirsty property, that is true by default
 // it should have a drink method. When called, the thirsty property changes to false
 
+var pet = "bat";
+
+class Vampire {
+  constructor (name, pet) {
+    this.name = name;
+    this.pet = pet;
+    this.thirsty = true;
+  }
+
+  drink() {
+    this.thirsty = false;
+  }
+}
+
+var vamp1 = new Vampire ("Bela Lugosi", pet);
+console.log(vamp1);
+//vamp1.drink();
 
 
 //  Write a Dragon class
