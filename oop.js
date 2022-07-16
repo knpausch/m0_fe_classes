@@ -90,7 +90,47 @@ drag1.eat();
 //  it should have a dynamic name property (string)
 //  it should have a dynamic disposition property (string)
 //  it should have an age property that defaults to 0
-//  it should have a celebrateBirthday method. When called, the age increases by 1
-//  it should have an isAdult property (boolean) that is false by default. once a Hobbit is 33, it should be an adult
-//  it should have an isOld property that defaults to false. once a Hobbit is 101, it is old.
-//  it should have a hasRing property. If the Hobbit's name is "Frodo", true, if not, false.
+//  it should have a celebrateBirthday method. When called, the age
+//increases by 1
+//  it should have an isAdult property (boolean) that is false by
+//default. once a Hobbit is 33, it should be an adult
+//  it should have an isOld property that defaults to false. once a
+//Hobbit is 101, it is old.
+//  it should have a hasRing property. If the Hobbit's name is
+//"Frodo", true, if not, false.
+
+var age = 0;
+var isAdult = false;
+var isOld = false;
+
+class Hobbit {
+  constructor (name, property, age, isAdult, isOld) {
+    this.name = name;
+    this.property = property;
+    this.age = age;
+    this.isAdult = isAdult;
+    this.isOld = isOld;
+    this.hasRing = false;
+
+    if (name === "Frodo") {
+      this.hasRing = true;
+    }
+  }
+  celebrateBirthday() {
+    this.age++;
+
+    if (this.age >= 33) {
+      this.isAdult = true;
+      if (this.age >= 101) {
+        this.isOld = true;
+      }
+    }
+  }
+
+}
+console.log(age);
+
+var hob1 = new Hobbit ("Frodo", "ok", age, isAdult, isOld);
+console.log(hob1);
+
+hob1.celebrateBirthday();
